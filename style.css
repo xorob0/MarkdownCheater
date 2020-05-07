@@ -5,7 +5,7 @@
  * Distributed under terms of the MIT license.
  */
 :root {
-  --page-height: calc(2 * 1150px); 
+  --page-height: calc(500px); 
 }
 
 body {

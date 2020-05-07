@@ -47,7 +47,7 @@ Of course outside of the `<div class="cheatContainer">` you can use normal markd
 - [pandoc](https://pandoc.org/): pdf generation
 - [ImageMagick' convert](http://www.imagemagick.org/script/convert.php) (optional): image generation
 
-# I don't like how it looks !
+## I don't like how it looks !
 
 You can just plug about anything on the css. If you want to force the mosaic effect, you can play with this line on the `style.css` file:
 ```css

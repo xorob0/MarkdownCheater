@@ -6,7 +6,7 @@
 # Distributed under terms of the GPL license.
 #
 file='index.md'
-output=${file%.*}.pdf
+output=''
 convertOutput=''
 papersize='a4'
 
@@ -22,7 +22,7 @@ parse_args() {
 						convertOutput="$2"
 						;;
 				--papersize)
-						convertOutput="$2"
+						papersize="$2"
 						;;
 				*)
 						echo "Unknown or badly placed parameter '$1'." 1>&2
@@ -36,7 +36,11 @@ while [ "$#" -ge 2 ]; do
 		shift; shift
 done
 
-pandoc -t html5 -V margin-top=3 -V margin-left=3 -V margin-right=3 -V margin-bottom=3 -V papersize=$papersize "$file" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
+if [ -z "$output" ]; then
+	output="${file%.*}.pdf"
+fi
+
+pandoc -t html5 -V margin-top=3 -V margin-left=3 -V margin-right=3 -V margin-bottom=3 -V papersize="$papersize" "$file" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
 
 if [ -n "$convertOutput" ]; then
 	convert "$output" "$convertOutput"

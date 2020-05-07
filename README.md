@@ -37,10 +37,20 @@ Of course outside of the `<div class="cheat">` you can use normal markdown.
 ## Usage
 
 ```sh
-./generate.sh -i INPUT.md [-o OUTPUT.pdf] [-c IMAGE.png]
+./generate.sh -i INPUT.md [-o OUTPUT.pdf] [-c IMAGE.png] [--papersize a3]
 ```
 
 ## Dependencies
 
 - [pandoc](https://pandoc.org/): pdf generation
 - [ImageMagick' convert](http://www.imagemagick.org/script/convert.php) (optional): image generation
+
+# I don't like how it looks !
+
+You can just plug about anything on the css. If you want to force the mosaic effect, you can play with this line on the `style.css` file:
+```css
+:root {
+  --page-height: calc(2 * 1150px); 
+}
+```
+The `1150px` is close to the height of one page in the defautl configuration. That means here it should wrap on two a4 pages.

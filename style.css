@@ -1,0 +1,44 @@
+/*
+ * style.css
+ * Copyright (C) 2020 xorob0
+ *
+ * Distributed under terms of the GPL license.
+ */
+
+body {
+	background: white;
+	color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cheatContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cheat {
+	flex: 40%;
+	margin: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+th {
+		display: none;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #fafafa;}

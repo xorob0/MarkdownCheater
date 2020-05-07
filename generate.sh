@@ -5,9 +5,10 @@
 #
 # Distributed under terms of the GPL license.
 #
-file=''
-output=''
+file='index.md'
+output=${file%.*}.pdf
 convertOutput=''
+papersize='a4'
 
 parse_args() {
 		case "$1" in
@@ -18,6 +19,9 @@ parse_args() {
 						output="$2"
 						;;
 				-c)
+						convertOutput="$2"
+						;;
+				--papersize)
 						convertOutput="$2"
 						;;
 				*)
@@ -32,11 +36,7 @@ while [ "$#" -ge 2 ]; do
 		shift; shift
 done
 
-if [ -z "$output" ]; then
-	output="${file%.*}.pdf"
-fi
-
-pandoc -t html "$file" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
+pandoc -t html5 -V margin-top=3 -V margin-left=3 -V margin-right=3 -V margin-bottom=3 -V papersize=$papersize "$file" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
 
 if [ -n "$convertOutput" ]; then
 	convert "$output" "$convertOutput"

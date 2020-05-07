@@ -44,4 +44,3 @@ Of course outside of the `<div class="cheat">` you can use normal markdown.
 
 - [pandoc](https://pandoc.org/): pdf generation
 - [ImageMagick' convert](http://www.imagemagick.org/script/convert.php) (optional): image generation
-- 

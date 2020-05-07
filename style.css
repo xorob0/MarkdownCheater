@@ -2,23 +2,16 @@
  * style.css
  * Copyright (C) 2020 xorob0
  *
- * Distributed under terms of the GPL license.
+ * Distributed under terms of the MIT license.
  */
+:root {
+  --number-of-pages: 4; 
+}
 
 body {
 	background: white;
 	color: #333;
 	font-family: Arial, Helvetica, sans-serif;
-}
-
-.cheatContainer {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.cheat {
-	min-width: 50%;
-	margin: 10px;
 }
 
 h1 {
@@ -30,8 +23,9 @@ th {
 }
 
 table {
-	width: 100%;
+	width: 100%
 }
+
 
 td {
 	padding: 15px;
@@ -39,7 +33,22 @@ td {
 	border-bottom: 1px solid #ddd;
 	text-align: left;
 }
-
+/*  */
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #fafafa;}
-col:first-child { width: 1% !important; }
+
+
+/* Render items as columns */
+.cheatContainer {
+  display: flex;
+  flex-flow: column wrap;
+	max-height:calc(var(--number-of-pages) * 1150px);
+}
+
+/* Re-order items into rows */
+.cheat:nth-child(2n+1) { order: 1; }
+.cheat:nth-child(2n)   { order: 2; }
+
+.cheat {
+	margin: 10px
+}

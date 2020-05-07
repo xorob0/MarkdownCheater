@@ -34,7 +34,7 @@ To create your own cheatsheets you should use this pattern:
 
 Everything you want to be styled as a cheatsheet should be wrapped in the `<div class="cheat">` container and each section should be wrapped in a `<div class="cheat">` container.
 
-Of course outside of the `<div class="cheat">` you can use normal markdown.
+Of course outside of the `<div class="cheatContainer">` you can use normal markdown.
 
 ## Usage
 

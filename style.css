@@ -17,8 +17,8 @@ body {
 }
 
 .cheat {
-	flex: 40%;
-	margin: 20px;
+	min-width: 50%;
+	margin: 10px;
 }
 
 h1 {

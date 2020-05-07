@@ -24,13 +24,13 @@ To create your own cheatsheets you should use this pattern:
 \:::
 ```
 
-Everything you want to be styled as a cheatsheet should be wrapped in the 
+Everything you want to be styled as a cheatsheet should be wrapped in a container looking like this:
 ```
 :::
 [...]
 \:::
 ```
-container and each section should be wrapped like this:
+And each section should be wrapped like this:
 ```
 :: Title
 	First| Explaination for First

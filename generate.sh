@@ -40,7 +40,8 @@ if [ -z "$output" ]; then
 	output="${file%.*}.pdf"
 fi
 
-pandoc -t html5 -V margin-top=3 -V margin-left=3 -V margin-right=3 -V margin-bottom=3 -V papersize="$papersize" "$file" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
+cat $file | sed -E "s/^:::$/<div class="cheatContainer">/" | sed -E "s/^\/::(:)?$/<\/div>/" | sed "s/^::\(.*\)/<div class="cheat">\n## \1\n\|\|\n\|-\|-/" |\
+pandoc -t html5 -V margin-top=3 -V margin-left=3 -V margin-right=3 -V margin-bottom=3 -V papersize="$papersize" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
 
 if [ -n "$convertOutput" ]; then
 	convert -trim "$output" "$convertOutput"

@@ -8,33 +8,37 @@ Markdown Cheater is the combination of a simple shell script and some CSS to all
 
 To create your own cheatsheets you should use this pattern:
 ```markdown
-<div class="cheatContainer">
+:::
+	:: Move around
+	<kbd>j</kbd>| Go down 
+	<kbd>k</kbd>| Go up
+	<kbd>l</kbd>| Go left
+	<kbd>h</kbd>| Go right
+	\::
 
-	<div class="cheat">
-		## Move around
-		|| 
-		|-|-
-		<kbd>j</kbd>| Go down 
-		<kbd>k</kbd>| Go up
-		<kbd>l</kbd>| Go left
-		<kbd>h</kbd>| Go right
-	</div>
-
-	<div class="cheat">
-		## Commands
-		|| 
-		|-|-
-		`:w`| Save file 
-		`:q`| Quit
-		`:wq`| Save and quit
-	</div>
-
-</div>
+	:: Commands
+	`:w`| Save file 
+	`:q`| Quit
+	`:wq`| Save and quit
+	\::
+\:::
 ```
 
-Everything you want to be styled as a cheatsheet should be wrapped in the `<div class="cheat">` container and each section should be wrapped in a `<div class="cheat">` container.
+Everything you want to be styled as a cheatsheet should be wrapped in the 
+```
+:::
+[...]
+\:::
+```
+container and each section should be wrapped like this:
+```
+:: Title
+	First| Explaination for First
+	Second| Explaination for Second
+\::
+```
 
-Of course outside of the `<div class="cheatContainer">` you can use normal markdown.
+Of course outside of the `:::` block you can use normal markdown.
 
 ## Usage
 

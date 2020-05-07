@@ -59,4 +59,4 @@ You can just plug about anything on the css. If you want to force the mosaic eff
   --page-height: calc(2 * 1150px); 
 }
 ```
-The `1150px` is close to the height of one page in the defautl configuration. That means here it should wrap on two a4 pages.
+The `1150px` is close to the height of one page in the default configuration. That means here it should wrap on two a4 pages.

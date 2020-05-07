@@ -36,7 +36,7 @@ if [ -z "$output" ]; then
 	output="${file%.*}.pdf"
 fi
 
-pandoc -t html "$file" --css style.css -o "$output" --metadata pagetitle="$filename"
+pandoc -t html "$file" --css style.css -o "$output" --metadata pagetitle="${file%.*}"
 
 if [ -n "$convertOutput" ]; then
 	convert "$output" "$convertOutput"

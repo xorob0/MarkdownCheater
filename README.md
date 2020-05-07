@@ -2,6 +2,8 @@
 
 Markdown Cheater is the combination of a simple shell script and some CSS to allow for easy cheatsheets creation using markdown. It is using [pandoc](https://pandoc.org/) to generate the pdf and [ImageMagick' convert](http://www.imagemagick.org/script/convert.php) for the images.
 
+![Vim cheatsheet example](./vim.jpg "This cheatsheet is so basic lol")
+
 ## Pattern
 
 To create your own cheatsheets you should use this pattern:

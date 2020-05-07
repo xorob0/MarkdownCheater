@@ -5,7 +5,7 @@
  * Distributed under terms of the MIT license.
  */
 :root {
-  --number-of-pages: 4; 
+  --page-height: calc(2 * 1150px); 
 }
 
 body {
@@ -42,7 +42,7 @@ tr:nth-child(odd) {background-color: #fafafa;}
 .cheatContainer {
   display: flex;
   flex-flow: column wrap;
-	max-height:calc(var(--number-of-pages) * 1150px);
+	max-height:var(--page-height);
 }
 
 /* Re-order items into rows */

@@ -5,7 +5,7 @@
 ## Move around
 || 
 |-|-
-<kbd>j</kbd>| Go down Go downGo downGo downGo downGo downGo downGo downGo downGo downGo downGo downGo down
+<kbd>j</kbd>| Go down 
 <kbd>k</kbd>| Go up
 <kbd>l</kbd>| Go left
 <kbd>h</kbd>| Go right
